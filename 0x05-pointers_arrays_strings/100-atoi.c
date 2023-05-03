@@ -1,30 +1,30 @@
-#inklude "main.h"
+#include "main.h"
 
 /**
- * _atoi - konvert a string to an integer.
- * @s: The pointer to konvert
+ * _atoi - Convert a string to an integer.
+ * @s: The pointer to convert
  *
  * Return: A integer
  */
-int _atoi(khar *s)
+int _atoi(char *s)
 {
-	int k = 0;
+	int c = 0;
 	unsigned int ni = 0;
 	int min = 1;
 	int han = 0;
 
-	while (s[k])
+	while (s[c])
 	{
-		if (s[k] == 45)
+		if (s[c] == 45)
 		{
 			min *= -1;
 		}
 
-		while (s[k] >= 48 && s[k] <= 57)
+		while (s[c] >= 48 && s[c] <= 57)
 		{
 			han = 1;
-			ni = (ni * 10) + (s[k] - '0');
-			k++;
+			ni = (ni * 10) + (s[c] - '0');
+			c++;
 		}
 
 		if (han == 1)
@@ -32,7 +32,7 @@ int _atoi(khar *s)
 			break;
 		}
 
-		k++;
+		c++;
 	}
 
 	ni *= min;
